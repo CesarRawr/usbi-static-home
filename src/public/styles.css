@@ -41,6 +41,10 @@
   border-radius: 2.5px;
 }
 
+footer {
+  background-color: #0E47A1;
+}
+
 .transition-1s {
   transition: all .1s ease-out 0s;
 }
