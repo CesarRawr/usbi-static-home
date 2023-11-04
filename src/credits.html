@@ -4,8 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>USBI | Créditos</title>
+  <link rel="stylesheet" type="text/css" href="./public/reset.css">
+  <link rel="stylesheet" type="text/css" href="./public/credits/credits.css">
+
+  <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
 </head>
 <body>
+  <!-- particles.js container --> 
+  <div id="particles-js">
+    <div class="back-button-container">
+      <button type="button" class="back-button">
+        <object data="./public/credits/arrow_back.svg" type="image/svg+xml" style="filter: invert(50%);"></object>
+        Regresar
+      </button>
+    </div>
+    <div class="credits">
+      <span class="credit-position">Director General</span>
+      <span class="credit-names">
+        Martín López Paez
+      </span>
+    </div>
+  </div> 
+  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+  <script src="./public/credits/particles.min.js"></script> 
+  <script src="./public/credits/particles.config.js"></script>
 
+  <!-- Credits --> 
+  <script src="./public/credits/credits.js"></script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../Montserrat.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../Roboto-Regular.ttf");
+}
+
+/* ---- reset ---- */
+ body{
+     margin:0;
+     font:normal 75% Arial, Helvetica, sans-serif;
+}
+ canvas{
+     display: block;
+     vertical-align: bottom;
+}
+/* ---- particles.js container ---- */
+ #particles-js{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #010101;
+}
+
+.credits {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: fixed;
+    padding: .5rem;
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    transition: all .3s ease-in 0s;
+    transform: translate(-50%, -50%);
+}
+
+.credit-position {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    color: #C0C0C0;
+    text-align: center;
+}
+
+.credit-names {
+    font-family: Montserat, sans-serif;
+     font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.back-button-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0px;
+
+    color: #888;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+}
