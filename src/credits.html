@@ -1,35 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>USBI | Créditos</title>
-  <link rel="stylesheet" type="text/css" href="./public/reset.css">
-  <link rel="stylesheet" type="text/css" href="./public/credits/credits.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>USBI | Créditos</title>
+    <link rel="stylesheet" type="text/css" href="./public/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./public/credits/credits.css"
+    />
 
-  <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
-</head>
-<body>
-  <!-- particles.js container --> 
-  <div id="particles-js">
-    <div class="back-button-container">
-      <button type="button" class="back-button">
-        <object data="./public/credits/arrow_back.svg" type="image/svg+xml" style="filter: invert(50%);"></object>
-        Regresar
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./public/favicon.ico" />
+  </head>
+  <body>
+      <!-- Previous Button -->
+      <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
       </button>
-    </div>
-    <div class="credits">
-      <span class="credit-position">Director General</span>
-      <span class="credit-names">
-        Martín López Paez
-      </span>
-    </div>
-  </div> 
-  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
-  <script src="./public/credits/particles.min.js"></script> 
-  <script src="./public/credits/particles.config.js"></script>
 
-  <!-- Credits --> 
-  <script src="./public/credits/credits.js"></script>
-</body>
+      <!-- Book -->
+      <div id="book" class="book">
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+          <div class="front book-cover">
+            <div class="mid-border">
+              <div class="inner-border">
+                <img class="corner-decoration corner-left-top" src="./public/credits/corner-decoration.jpg"></img>
+                <img class="corner-decoration corner-right-top" src="./public/credits/corner-decoration.jpg"></img>
+                <img class="corner-decoration corner-right-bottom" src="./public/credits/corner-decoration.jpg"></img>
+                <img class="corner-decoration corner-left-bottom" src="./public/credits/corner-decoration.jpg"></img>
+                <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+                <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+
+                <div class="menu-title">Créditos</div>
+              </div>
+            </div>
+          </div>
+          <div class="back page">
+            <div id="b1" class="back-content">
+              <div class="mid-border">
+                <div class="inner-border">
+                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+          <div class="front page">
+            <div id="f2" class="front-content">
+              <div class="mid-border">
+                <div class="inner-border">
+                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="back page">
+            <div id="b2" class="back-content">
+              <div class="mid-border">
+                <div class="inner-border">
+                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+          <div class="front page">
+            <div id="f3" class="front-content">
+              <div class="mid-border">
+                <div class="inner-border">
+                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="back book-cover">
+            <div id="b3" class="back-content">
+              <div class="mid-border">
+                <div class="inner-border">
+                  <img class="corner-decoration corner-left-top" src="./public/credits/corner-decoration.jpg"></img>
+                  <img class="corner-decoration corner-right-top" src="./public/credits/corner-decoration.jpg"></img>
+                  <img class="corner-decoration corner-right-bottom" src="./public/credits/corner-decoration.jpg"></img>
+                  <img class="corner-decoration corner-left-bottom" src="./public/credits/corner-decoration.jpg"></img>
+                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Button -->
+      <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+      </button>
+
+    <!-- Credits -->
+    <script src="./public/credits/credits.js"></script>
+  </body>
 </html>
