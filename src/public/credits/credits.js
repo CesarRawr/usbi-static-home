@@ -1,83 +1,81 @@
-// References to DOM Elements
-const prevBtn = document.querySelector("#prev-btn");
-const nextBtn = document.querySelector("#next-btn");
-const book = document.querySelector("#book");
+import {data} from "./data.js";
+import {involvedTemplate} from "./templates.js";
 
-const paper1 = document.querySelector("#p1");
-const paper2 = document.querySelector("#p2");
-const paper3 = document.querySelector("#p3");
+const screenWidth = window.innerWidth;
+const backBtn = document.querySelector(".back-btn");
+backBtn.addEventListener("click", (e) => {
+	window.history.back();
+});
 
-// Event Listener
-prevBtn.addEventListener("click", goPrevPage);
-nextBtn.addEventListener("click", goNextPage);
+if (screenWidth >= 1021) {
+	let focusedButton = 0;
+	const changeCredits = new Event("change-credits");
+	const yearBtns = document.querySelectorAll(".year-btn");
 
-// Business Logic
-let currentLocation = 1;
-let numOfPapers = 3;
-let maxLocation = numOfPapers + 1;
+	const creditsContainer = document.querySelector(".credits-container");
+	creditsContainer.addEventListener("change-credits", (e) => {
+		const creditsData = data[focusedButton];
+		// Forming template
+		const involvedHtml = involvedTemplate(creditsData["involved"]);
+		e.target.innerHTML = `
+			<span class="main-title">
+          ${creditsData.year}
+      </span>
+			<span class="main-title">
+	      ${creditsData.title}
+	    </span>
+	    <span class="main-subtitle">${creditsData.subtitle}</span>
+	    <section class="involved">
+	      ${involvedHtml}
+	    </section>
+		`;
+	});
 
-function openBook() {
-    book.style.transform = "translateX(50%)";
-    prevBtn.style.transform = "translateX(-180px)";
-    nextBtn.style.transform = "translateX(180px)";
+	yearBtns.forEach((button, indexButton) => {
+		// hover animation
+		button.addEventListener("mouseover", (e) => {
+			button.style.backgroundColor = "#7a2a35";
+		});
+
+		button.addEventListener("mouseout", (e) => {
+			if (focusedButton !== indexButton) {
+				button.style.backgroundColor = "#5E2129";
+			}
+		});
+
+		// Seleccionar primer botón del menú
+		if (!Boolean(indexButton)) {
+			button.style.backgroundColor = "#7a2a35";
+		}
+
+		button.addEventListener("click", (e) => {
+			// Deseleccionar último botón seleccionado
+			yearBtns[focusedButton].style.backgroundColor = "#5E2129";
+
+			focusedButton = indexButton;
+			e.target.style.backgroundColor = "#7a2a35";
+			creditsContainer.dispatchEvent(changeCredits);
+		});
+	});	
 }
 
-function closeBook(isAtBeginning) {
-    if(isAtBeginning) {
-        book.style.transform = "translateX(0%)";
-    } else {
-        book.style.transform = "translateX(100%)";
-    }
-    
-    prevBtn.style.transform = "translateX(0px)";
-    nextBtn.style.transform = "translateX(0px)";
-}
+if (screenWidth < 1021) {
+	const creditsContainer = document.querySelector(".credits-container");
+	const allInvolvedsString = data.map((creditsData, index, array) => {
+		const involvedHtml = involvedTemplate(creditsData.involved);
+		return `
+			<span class="main-title">
+          ${creditsData.year}
+      </span>
+			<span class="main-title">
+	      ${creditsData.title}
+	    </span>
+	    <span class="main-subtitle">${creditsData.subtitle}</span>
+	    <section class="involved">
+	      ${involvedHtml}
+	    </section>
+		`;
+	}).join("·");
 
-function goNextPage() {
-    if(currentLocation < maxLocation) {
-        switch(currentLocation) {
-            case 1:
-                openBook();
-                paper1.classList.add("flipped");
-                paper1.style.zIndex = 1;
-                break;
-            case 2:
-                paper2.classList.add("flipped");
-                paper2.style.zIndex = 2;
-                break;
-            case 3:
-                paper3.classList.add("flipped");
-                paper3.style.zIndex = 3;
-                closeBook(false);
-                break;
-            default:
-                throw new Error("unkown state");
-        }
-        currentLocation++;
-    }
-}
-
-function goPrevPage() {
-    if(currentLocation > 1) {
-        switch(currentLocation) {
-            case 2:
-                closeBook(true);
-                paper1.classList.remove("flipped");
-                paper1.style.zIndex = 3;
-                break;
-            case 3:
-                paper2.classList.remove("flipped");
-                paper2.style.zIndex = 2;
-                break;
-            case 4:
-                openBook();
-                paper3.classList.remove("flipped");
-                paper3.style.zIndex = 1;
-                break;
-            default:
-                throw new Error("unkown state");
-        }
-
-        currentLocation--;
-    }
+	creditsContainer.innerHTML = allInvolvedsString;
 }

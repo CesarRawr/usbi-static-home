@@ -10,107 +10,48 @@
       type="text/css"
       href="./public/credits/credits.css"
     />
-
-    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./public/favicon.ico" />
   </head>
   <body>
-      <!-- Previous Button -->
-      <button id="prev-btn">
-        <i class="fas fa-arrow-circle-left"></i>
-      </button>
-
-      <!-- Book -->
-      <div id="book" class="book">
-        <!-- Paper 1 -->
-        <div id="p1" class="paper">
-          <div class="front book-cover">
-            <div class="mid-border">
-              <div class="inner-border">
-                <img class="corner-decoration corner-left-top" src="./public/credits/corner-decoration.jpg"></img>
-                <img class="corner-decoration corner-right-top" src="./public/credits/corner-decoration.jpg"></img>
-                <img class="corner-decoration corner-right-bottom" src="./public/credits/corner-decoration.jpg"></img>
-                <img class="corner-decoration corner-left-bottom" src="./public/credits/corner-decoration.jpg"></img>
-                <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-                <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-
-                <div class="menu-title">Créditos</div>
-              </div>
-            </div>
-          </div>
-          <div class="back page">
-            <div id="b1" class="back-content">
-              <div class="mid-border">
-                <div class="inner-border">
-                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Paper 2 -->
-        <div id="p2" class="paper">
-          <div class="front page">
-            <div id="f2" class="front-content">
-              <div class="mid-border">
-                <div class="inner-border">
-                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="back page">
-            <div id="b2" class="back-content">
-              <div class="mid-border">
-                <div class="inner-border">
-                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Paper 3 -->
-        <div id="p3" class="paper">
-          <div class="front page">
-            <div id="f3" class="front-content">
-              <div class="mid-border">
-                <div class="inner-border">
-                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="back book-cover">
-            <div id="b3" class="back-content">
-              <div class="mid-border">
-                <div class="inner-border">
-                  <img class="corner-decoration corner-left-top" src="./public/credits/corner-decoration.jpg"></img>
-                  <img class="corner-decoration corner-right-top" src="./public/credits/corner-decoration.jpg"></img>
-                  <img class="corner-decoration corner-right-bottom" src="./public/credits/corner-decoration.jpg"></img>
-                  <img class="corner-decoration corner-left-bottom" src="./public/credits/corner-decoration.jpg"></img>
-                  <img class="vertical-decoration top" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-                  <img class="vertical-decoration bottom" src="./public/credits/horizontally-centered-vertical-decoration.png"></img>
-                </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Next Button -->
-      <button id="next-btn">
-        <i class="fas fa-arrow-circle-right"></i>
-      </button>
-
+    <div class="container">
+      <header class="menu-container">
+        <button class="back-btn">
+          <img src="./public/credits/arrow_back_FILL0_wght400_GRAD0_opsz24.svg">
+        </button>
+        <nav class="years-menu">
+          <button class="year-btn" style="border-radius: 0 0 0 5px;">1991</button>
+          <button class="year-btn">1997</button>
+          <button class="year-btn">1998</button>
+          <button class="year-btn">1999</button>
+          <button class="year-btn">2000</button>
+          <button class="year-btn">2004-2009</button>
+          <button class="year-btn">2013</button>
+          <button class="year-btn">2013-2</button>
+          <button class="year-btn">2015</button>
+          <button class="year-btn">2017</button>
+          <button class="year-btn">2018</button>
+          <button class="year-btn" style="border-radius: 0 0 5px 0;">2019</button>
+        </nav>
+      </header>
+      <main class="credits-container">
+        <span class="main-title">
+          1991
+        </span>
+        <span class="main-title">
+          Índice del Archivo Notarial de Jalapa: siglo XVI
+        </span>
+        <span class="main-subtitle">protocolos 1578-1594 y 1594-1600</span>
+        <section class="involved">
+          <span class="position">
+            Autor
+          </span>
+          <main class="names">
+            <span>Gilberto Bermúdez Gorrochotegui</span>
+          </main>
+        </section>
+      </main>
+    </div>
     <!-- Credits -->
-    <script src="./public/credits/credits.js"></script>
+    <script type="module" src="./public/credits/credits.js" ></script>
   </body>
 </html>
