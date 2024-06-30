@@ -1,6 +1,7 @@
 export const data = [
 	// 1991
 	{
+		image: "01.jpg",
 		year: "1991",
 		title: "Índice del Archivo Notarial de Jalapa",
 		subtitle: "siglo XVI, protocolos 1578-1594 y 1594-1600",
@@ -13,6 +14,7 @@ export const data = [
 	},
 	// 1997
 	{
+		image: "02.jpg",
 		year: "1997",
 		title: "Índice del Archivo Notarial de Jalapa",
 		subtitle: "siglo XVII: protocolos 1600-1608 y 1609-1617",
@@ -25,6 +27,7 @@ export const data = [
 	},
 	// 1998
 	{
+		image: "03.jpg",
 		year: "1998",
 		title: "Índice del Archivo Notarial de Jalapa",
 		subtitle: "protocolos 1617-1631, 1632-1645 y 1645-1651",
@@ -37,6 +40,7 @@ export const data = [
 	},
 	// 1999
 	{
+		image: "04.jpg",
 		year: "1999",
 		title: "Índice del Archivo Notarial de Jalapa",
 		subtitle: "1651-1663, 1663-1667 y 1668-1674",
@@ -49,6 +53,7 @@ export const data = [
 	},
 	// 2000
 	{
+		image: "05.jpg",
 		year: "2000",
 		title: "Índice del Archivo Notarial de Jalapa",
 		subtitle: "protocolos: 1675-1680, 1681-1693 y 1694-1699",
@@ -61,6 +66,7 @@ export const data = [
 	},
 	// 2004-2009
 	{
+		image: "06.jpg",
 		year: "2004-2009",
 		title: "Catálogo e índices del Archivo Notarial de Xalapa",
 		subtitle: "siglo XVIII",
@@ -117,6 +123,7 @@ export const data = [
 	},
 	// 2013
 	{
+		image: "07.jpg",
 		year: "2013",
 		title: "Catálogo e índices del Archivo Notarial de Xalapa",
 		subtitle: "1800-1820",
@@ -157,7 +164,8 @@ export const data = [
 	},
 	// 2013 (Segundo Grupo)
 	{
-		year: "2013-2",
+		image: "08.jpeg",
+		year: "2013 II",
 		title: "Catálogo e índices del Archivo Notarial de Orizaba",
 		subtitle: "siglo XVI (segundo grupo documental)",
 		involved: [
@@ -181,6 +189,7 @@ export const data = [
 	},
 	// 2015
 	{
+		image: "09.jpg",
 		year: "2015",
 		title: "Catálogo e índices del Archivo Notarial de Córdoba",
 		subtitle: "siglo XVII",
@@ -205,6 +214,7 @@ export const data = [
 	},
 	// 2017
 	{
+		image: "10.jpeg",
 		year: "2017",
 		title: "Catálogo e índices del Archivo Notarial de Orizaba",
 		subtitle: "1603-1649 (segundo grupo documental)",
@@ -229,6 +239,7 @@ export const data = [
 	},
 	// 2018
 	{
+		image: "11.jpg",
 		year: "2018",
 		title: "Catálogo e índices del Archivo Notarial de Córdoba",
 		subtitle: "siglo XVIII (1700-1720)",
@@ -253,6 +264,7 @@ export const data = [
 	},
 	// 2019
 	{
+		image: "12.jpg",
 		year: "2019",
 		title: "Catálogo e índices del Archivo Notarial de Xalapa",
 		subtitle: "1821-1840",

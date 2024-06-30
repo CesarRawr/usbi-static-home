@@ -1,41 +1,23 @@
 @font-face {
-    font-family: "updock";
-    src: url("./Updock-Regular.ttf") format("truetype");
+    font-family: "Gill Sans";
+    src: url("./Gill-Sans.otf") format("opentype");
 }
 
 * {
     font-size: 27px;
-    font-family: "updock", sans-serif;
+    font-family: "Gill Sans", sans-serif;
 }
 
 .container {
     display: flex;
-    flex-flow: column nowrap;
     height: 100vh;
-    background-image: url("./book-tile.jpg");
-    background-repeat: repeat;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .menu-container {
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
-}
-
-.back-btn {
+    position: sticky;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    border: none;
-}
-
-.back-btn img {
-    width: 30%;
-}
-
-.back-btn img:hover {
-    filter: invert(50%);
+    padding: .5rem;
 }
 
 main.credits-container {
@@ -44,7 +26,6 @@ main.credits-container {
     align-items: center;
     flex-flow: column nowrap;
     padding-top: 0.8rem;
-    overflow-y: auto;
 }
 
 .main-title,
@@ -76,38 +57,51 @@ main.credits-container {
 @media only screen and (min-width: 1021px) {
     .years-menu {
         display: flex;
-        background-image: url("./book-tile.jpg");
-        background-repeat: repeat;
-        justify-content: center;
+        flex-grow: 1;
+        flex-flow: column nowrap;
     }
 
     .year-btn {
-        padding: 0.8rem 1rem;
-        background-color: #5e2129;
+        flex-grow: 1;
+        background-color: #18529D;
+        padding: 0 .8rem;
         border: 0px;
         color: #fafafa;
         cursor: default;
-        font-family: "updock", sans-serif;
+        font-size: 1rem;
+        font-family: "Gill Sans", sans-serif;
         transition: background-color 0.2s ease-in 0s;
     }
 
     .year-btn:hover {
-        background-color: #7a2a35;
+        background-color: #28AD56;
     }
 
     .year-btn:focus {
-        background-color: #7a2a35;
+        background-color: #28AD56;
         outline: none;
     }
 
     .year-btn:active {
-        background-color: #7a2a35;
+        background-color: #28AD56;
         outline: none;
+    }
+
+    .case-img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-width: 300px;
+      min-height: 400px;
+      margin: 1rem 0;   
     }
 }
 
 @media only screen and (max-width: 1020px) {
     .years-menu {
+        display: none;
+    }
+
+    .case-img {
         display: none;
     }
 }

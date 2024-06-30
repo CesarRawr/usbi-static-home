@@ -1,11 +1,8 @@
-import {data} from "./data.js";
-import {involvedTemplate} from "./templates.js";
+import { data } from "./data.js";
+import { involvedTemplate } from "./templates.js";
 
 const screenWidth = window.innerWidth;
 const backBtn = document.querySelector(".back-btn");
-backBtn.addEventListener("click", (e) => {
-	window.history.back();
-});
 
 if (screenWidth >= 1021) {
 	let focusedButton = 0;
@@ -18,64 +15,77 @@ if (screenWidth >= 1021) {
 		// Forming template
 		const involvedHtml = involvedTemplate(creditsData["involved"]);
 		e.target.innerHTML = `
+			<span class="main-title">Créditos Archivos Notariales De Xalapa</span>
+	        <div class="case-img" style="background-image: url('./public/credits/imagenes/${
+				creditsData["image"]
+			}'); ${
+				creditsData["image"] === "07.jpg"
+					? "background-position: right;"
+					: "background-position: top;"
+			}">
+	        </div>
 			<span class="main-title">
-          ${creditsData.year}
-      </span>
+		    	${creditsData.year}
+		    </span>
 			<span class="main-title">
-	      ${creditsData.title}
-	    </span>
-	    <span class="main-subtitle">${creditsData.subtitle}</span>
-	    <section class="involved">
-	      ${involvedHtml}
-	    </section>
+		      	${creditsData.title}
+		    </span>
+	    	<span class="main-subtitle">${creditsData.subtitle}</span>
+    		<section class="involved">
+	      		${involvedHtml}
+	    	</section>
 		`;
 	});
 
 	yearBtns.forEach((button, indexButton) => {
 		// hover animation
 		button.addEventListener("mouseover", (e) => {
-			button.style.backgroundColor = "#7a2a35";
+			button.style.backgroundColor = "#28AD56";
 		});
 
 		button.addEventListener("mouseout", (e) => {
 			if (focusedButton !== indexButton) {
-				button.style.backgroundColor = "#5E2129";
+				button.style.backgroundColor = "#18529D";
 			}
 		});
 
 		// Seleccionar primer botón del menú
 		if (!Boolean(indexButton)) {
-			button.style.backgroundColor = "#7a2a35";
+			button.style.backgroundColor = "#28AD56";
 		}
 
 		button.addEventListener("click", (e) => {
 			// Deseleccionar último botón seleccionado
-			yearBtns[focusedButton].style.backgroundColor = "#5E2129";
+			yearBtns[focusedButton].style.backgroundColor = "#18529D";
 
 			focusedButton = indexButton;
-			e.target.style.backgroundColor = "#7a2a35";
+			e.target.style.backgroundColor = "#28AD56";
 			creditsContainer.dispatchEvent(changeCredits);
 		});
-	});	
+	});
 }
 
 if (screenWidth < 1021) {
 	const creditsContainer = document.querySelector(".credits-container");
-	const allInvolvedsString = data.map((creditsData, index, array) => {
-		const involvedHtml = involvedTemplate(creditsData.involved);
-		return `
+	const allInvolvedsString = data
+		.map((creditsData, index, array) => {
+			const involvedHtml = involvedTemplate(creditsData.involved);
+			return `
 			<span class="main-title">
-          ${creditsData.year}
-      </span>
+          		${creditsData.year}
+	      	</span>
 			<span class="main-title">
-	      ${creditsData.title}
-	    </span>
-	    <span class="main-subtitle">${creditsData.subtitle}</span>
-	    <section class="involved">
-	      ${involvedHtml}
-	    </section>
+		      	${creditsData.title}
+		    </span>
+		    <span class="main-subtitle">
+		    	${creditsData.subtitle}
+		    </span>
+		    <section class="involved">
+		      	${involvedHtml}
+		    </section>
 		`;
-	}).join("·");
+		})
+		.join("·");
 
 	creditsContainer.innerHTML = allInvolvedsString;
 }
